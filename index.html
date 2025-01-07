@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet- Telegram Groups and Channels</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #282c34;
+            color: white;
+            padding: 0.5rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header .menu-icon {
+            font-size: 1.8rem;
+            cursor: pointer;
+            display: none;
+        }
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #444;
+            border-radius: 5px;
+        }
+        nav.active {
+            display: flex;
+            flex-direction: column;
+            background-color: #282c34;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 100%;
+            text-align: right;
+            padding: 1rem;
+        }
+        main {
+            flex: 1;
+            padding: 70px 1rem 2rem;
+        }
+        .telegram-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+        .telegram-card {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(30% - 2rem);
+            min-width: 280px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .telegram-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .telegram-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .telegram-card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        footer {
+            background-color: #282c34;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header .menu-icon {
+                display: block;
+            }
+            nav {
+                display: none;
+            }
+            .telegram-card {
+                width: calc(100% - 2rem);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BET</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Telegram Links</a>
+            <a href="#">Other Sites</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="telegram-links">
+            <!-- Telegram Group/Channel Card 1 -->
+            <div class="telegram-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo">
+                <a href="https://t.me/example1" target="_blank">Telegram Group 1</a>
+            </div>
+            <!-- Telegram Group/Channel Card 2 -->
+            <div class="telegram-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo">
+                <a href="https://t.me/example2" target="_blank">Telegram Group 2</a>
+            </div>
+            <!-- Add more Telegram Cards as needed -->
+        </section>
+    </main>
+
+    <footer>
+        This page is created by programmer Deepak.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
